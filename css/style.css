@@ -351,7 +351,7 @@ backdrop-filter: blur(20px); }
     display:none !important;
   }
 
-  .menu-toggle{
+ .menu-toggle{
     display:flex !important;
     align-items:center;
     justify-content:center;
@@ -364,8 +364,8 @@ backdrop-filter: blur(20px); }
     width:46px;
     height:46px;
 
-    background:#5b332c;
-    color:#fff;
+    background: transparent;
+    color:hsl(9, 32%, 47%);
     border:0;
     border-radius:14px;
 
