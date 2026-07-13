@@ -296,7 +296,47 @@ backdrop-filter: blur(20px); }
 
 .tool-card { min-height: 170px; }
 .tool-card h3 { color: var(--marron); font-size: 22px; }
-.avatar { width: 78px; height: 78px; border-radius: 50%; background: linear-gradient(135deg, var(--marron), var(--beige-2)); color: #fff; display: grid; place-items: center; font-weight: 900; font-size: 22px; margin-bottom: 18px; }
+
+.avatar{
+  width: 140px;
+  height:140px;
+  border-radius:50%;
+  overflow:hidden;
+  margin-bottom:20px;
+
+  background:none;
+  display:block;
+  flex-shrink:0;
+
+  border:3px solid rgba(91,51,44,.12);
+  box-shadow:0 10px 24px rgba(53,32,28,.12);
+}
+
+.avatar img{
+  width:100%;
+  height:100%;
+  display:block;
+
+  object-fit:cover;
+  object-position:center top;
+}
+
+.team-card{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  min-height:330px;
+}
+
+.team-card h3{
+  margin-top:0;
+}
+
+.team-card p{
+  line-height:1.55;
+}
+
+
 .team-card strong { display: block; color: var(--marron); margin-bottom: 12px; font-size: 14px; }
 .sector-list { display: flex; flex-wrap: wrap; gap: 14px; }
 
@@ -402,6 +442,17 @@ backdrop-filter: blur(20px); }
   h1 { letter-spacing: -1.5px; }
 }
 
+@media (max-width:640px){
+
+  .team-card{
+    min-height:auto;
+  }
+
+  .avatar{
+    width:92px;
+    height:92px;
+  }
+}
 
 .about-card{
   position:relative;
@@ -726,3 +777,25 @@ backdrop-filter: blur(20px); }
   }
 }
 /* ================= FIN SLIDEER ================= */
+
+/* ================= CENTRADO DE NOMBRES ================= */
+.team-card{
+  align-items:center !important;
+  text-align:center;
+}
+
+.team-card .avatar{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.team-card h3,
+.team-card strong{
+  text-align:center;
+}
+
+.team-card p{
+  text-align:left;
+}
+
+/* ================= FIN CENTRADO ================= */
