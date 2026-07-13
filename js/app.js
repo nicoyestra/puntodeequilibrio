@@ -27,24 +27,5 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 revealElements.forEach((element) => revealObserver.observe(element));
 
-contactForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  const numeroWhatsapp = '5490000000000';
-  const nombre = document.getElementById('nombre').value.trim();
-  const empresa = document.getElementById('empresa').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const telefono = document.getElementById('telefono').value.trim();
-  const mensaje = document.getElementById('mensaje').value.trim();
-
-  const texto = `Hola, quiero consultar por Punto de Equilibrio Consultores.%0A%0A` +
-    `Nombre: ${encodeURIComponent(nombre)}%0A` +
-    `Empresa: ${encodeURIComponent(empresa)}%0A` +
-    `Email: ${encodeURIComponent(email)}%0A` +
-    `Teléfono: ${encodeURIComponent(telefono)}%0A` +
-    `Consulta: ${encodeURIComponent(mensaje)}`;
-
-  window.open(`https://wa.me/${numeroWhatsapp}?text=${texto}`, '_blank');
-});
 
 
