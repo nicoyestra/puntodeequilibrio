@@ -347,25 +347,77 @@
   </div>
 </section>
 
-    <section class="section contact" id="contacto">
-      <div class="container contact-grid reveal">
-        <div>
-          <span class="section-kicker">Contacto</span>
-          <h2>Hablemos de tu empresa.</h2>
-          <p>Coordinemos una reunión para entender tu situación actual y detectar oportunidades de mejora.</p>
-          
-        </div>
+<section class="section contact" id="contacto">
+  <div class="container contact-grid reveal">
 
-        <form id="contactForm" class="contact-form">
-          <input type="text" id="nombre" placeholder="Nombre y apellido" required />
-          <input type="text" id="empresa" placeholder="Empresa" />
-          <input type="email" id="email" placeholder="Email" required />
-          <input type="tel" id="telefono" placeholder="Teléfono / WhatsApp" />
-          <textarea id="mensaje" placeholder="Contanos brevemente qué necesitás"></textarea>
-          <button class="btn btn-primary" type="submit">Enviar consulta</button>
-        </form>
-      </div>
-    </section>
+    <div>
+      <span class="section-kicker">Contacto</span>
+      <h2>Hablemos de tu empresa.</h2>
+      <p>
+        Coordinemos una reunión para entender tu situación actual
+        y detectar oportunidades de mejora.
+      </p>
+    </div>
+
+    <form
+      id="contactForm"
+      class="contact-form"
+      action="https://formspree.io/f/TU_ID_DE_FORMSPREE"
+      method="POST"
+    >
+
+      <input
+        type="hidden"
+        name="_subject"
+        value="Nueva consulta desde Punto de Equilibrio Consultores"
+      >
+
+      <input
+        type="text"
+        id="nombre"
+        name="nombre"
+        placeholder="Nombre y apellido"
+        required
+      >
+
+      <input
+        type="text"
+        id="empresa"
+        name="empresa"
+        placeholder="Empresa"
+      >
+
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Email"
+        required
+      >
+
+      <input
+        type="tel"
+        id="telefono"
+        name="telefono"
+        placeholder="Teléfono / WhatsApp"
+      >
+
+      <textarea
+        id="mensaje"
+        name="mensaje"
+        placeholder="Contanos brevemente qué necesitás"
+        required
+      ></textarea>
+
+      <button class="btn btn-primary" type="submit">
+        Enviar consulta
+      </button>
+
+    </form>
+
+  </div>
+</section>
+    
   </main>
 
   <footer class="site-footer">
